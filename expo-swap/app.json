@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "LayerHop Swap",
+    "slug": "layerhop-expo-swap",
+    "scheme": "layerhop-expo-swap",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#090d15",
+    "ios": { "supportsTablet": true },
+    "android": { "edgeToEdgeEnabled": true }
+  }
+}
