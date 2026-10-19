@@ -1,0 +1,27 @@
+{
+  "name": "layerhop-deposit-address-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hono service: a LayerHop deposit address per user, credited from order.filled webhooks",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/server.ts",
+    "build": "tsc -p .",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "test": "tsx --test src/*.test.ts",
+    "typecheck": "tsc -p tsconfig.test.json"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.0",
+    "@layerhop/sdk": "^0.6.0",
+    "hono": "^4.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

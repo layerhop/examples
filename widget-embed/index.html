@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Swap widget · built with LayerHop</title>
+    <style>
+      :root { color-scheme: light dark; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+      body { margin: 0; padding: 48px 16px; display: grid; justify-items: center; gap: 16px; background: Canvas; color: CanvasText; }
+      h1 { margin: 0; font-size: 22px; }
+      p { margin: 0; max-width: 480px; text-align: center; opacity: 0.75; }
+      #log { width: 100%; max-width: 480px; min-height: 1.5em; font: 13px ui-monospace, monospace; opacity: 0.75; }
+    </style>
+  </head>
+  <body>
+    <h1>Bridge to Solana</h1>
+    <p>A plain HTML page: one &lt;div&gt; and one script tag. Open this file directly or serve it from anywhere.</p>
+
+    <!--
+      Every widget option is a kebab-case data attribute (docs.layerhop.com/widget-reference).
+      To earn partner fees, add your partner id:  data-integrator="your-partner-id"
+    -->
+    <div
+      data-layerhop-widget
+      data-src-chain="base"
+      data-src-token="USDC"
+      data-dst-chain="solana"
+      data-dst-token="SOL"
+      data-amount="25"
+      data-theme="auto"
+      data-preset="ocean"
+    ></div>
+    <pre id="log"></pre>
+
+    <!-- Pin the version you tested with. -->
+    <script src="https://unpkg.com/@layerhop/widget@0.6.0/dist/embed.js" defer></script>
+    <script>
+      // Widget events bubble from the element as `layerhop:<type>` DOM events, payload in event.detail.
+      const el = document.querySelector("[data-layerhop-widget]");
+      const log = document.getElementById("log");
+      for (const type of ["quote", "submitted", "status", "error"]) {
+        el.addEventListener("layerhop:" + type, (e) => {
+          log.textContent = type + " " + JSON.stringify(e.detail);
+        });
+      }
+    </script>
+    <p><a href="./react.html">React version →</a></p>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+:root { color-scheme: light dark; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+body { margin: 0; padding: 48px 16px; background: Canvas; color: CanvasText; }
+main { display: grid; justify-items: center; gap: 16px; }
+h1 { margin: 0; font-size: 22px; }
+.tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.tabs button { padding: 8px 12px; border: 1px solid color-mix(in srgb, CanvasText 20%, transparent); border-radius: 999px; background: transparent; color: inherit; font: inherit; font-size: 14px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: CanvasText; color: Canvas; }
+.muted { margin: 0; opacity: 0.7; text-align: center; }
