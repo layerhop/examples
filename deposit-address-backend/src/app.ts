@@ -105,7 +105,7 @@ export function createApp(cfg: Config, store: Store, lh = new LayerHop({ apiKey:
    */
   app.post("/webhooks/layerhop", async (c) => {
     const raw = await c.req.text();
-    if (!verifyWebhookSignature(cfg.webhookSecret, c.req.header("LayerHop-Signature"), raw)) return c.text("bad signature", 400);
+    if (!(await verifyWebhookSignature(cfg.webhookSecret, c.req.header("LayerHop-Signature"), raw))) return c.text("bad signature", 400);
     const event = JSON.parse(raw) as WebhookEventPayload;
     if (!store.markEventSeen(event.id)) return c.text("ok (duplicate)");
 

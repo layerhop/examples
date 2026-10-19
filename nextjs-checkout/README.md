@@ -16,7 +16,7 @@ the order; the success page shows the paid state.
 | `app/pay/[id]/embedded-checkout.tsx` | Embeds the checkout with `<LayerHopCheckout sessionId>` from `@layerhop/widget/react` |
 | `app/api/webhooks/layerhop/route.ts` | Verifies `LayerHop-Signature` on the raw body, deduplicates on `event.id`, fulfils on `checkout.session.completed` |
 | `app/success/page.tsx` | Reads the session status from the API and whether the webhook fulfilled it |
-| `lib/verify-webhook.ts` | The signature check (HMAC-SHA256 of `"<t>.<raw body>"`, 5-minute tolerance, rotation-safe), same algorithm as the SDK helpers |
+| `lib/verify-webhook.ts` | Re-exports the SDK's signature check (HMAC-SHA256 of `"<t>.<raw body>"`, 5-minute tolerance, rotation-safe), same algorithm as the SDK helpers |
 | `lib/store.ts` | In-memory fulfilment record. Replace with your database. |
 
 Fulfil on the webhook, not on the redirect: the redirect can be skipped or faked, the signed webhook cannot.

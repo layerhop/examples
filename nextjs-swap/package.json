@@ -10,8 +10,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@layerhop/react": "^0.6.0",
-    "@layerhop/sdk": "^0.6.0",
+    "@layerhop/react": "^0.7.0",
+    "@layerhop/sdk": "^0.7.0",
     "@rainbow-me/rainbowkit": "^2.2.11",
     "@solana/wallet-adapter-react": "^0.15.40",
     "@solana/wallet-adapter-react-ui": "^0.9.40",

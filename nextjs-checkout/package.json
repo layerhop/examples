@@ -10,8 +10,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@layerhop/sdk": "^0.6.0",
-    "@layerhop/widget": "^0.6.0",
+    "@layerhop/sdk": "^0.7.0",
+    "@layerhop/widget": "^0.7.0",
     "next": "^16.4.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
