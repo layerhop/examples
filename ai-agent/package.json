@@ -1,0 +1,26 @@
+{
+  "name": "layerhop-ai-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An AI SDK agent that quotes LayerHop swaps and returns the unsigned transaction for a human to sign",
+  "type": "module",
+  "scripts": {
+    "start": "tsx --env-file-if-exists=.env src/index.ts",
+    "demo": "tsx --env-file-if-exists=.env src/index.ts --no-llm",
+    "build": "tsc -p .",
+    "typecheck": "tsc -p . --noEmit"
+  },
+  "dependencies": {
+    "@layerhop/sdk": "^0.6.0",
+    "ai": "^7.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

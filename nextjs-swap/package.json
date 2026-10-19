@@ -1,0 +1,35 @@
+{
+  "name": "layerhop-nextjs-swap",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next.js swap page: quote, approve, swap and track cross-chain orders with LayerHop (EVM via RainbowKit, Solana via wallet-adapter)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@layerhop/react": "^0.6.0",
+    "@layerhop/sdk": "^0.6.0",
+    "@rainbow-me/rainbowkit": "^2.2.11",
+    "@solana/wallet-adapter-react": "^0.15.40",
+    "@solana/wallet-adapter-react-ui": "^0.9.40",
+    "@solana/web3.js": "^1.99.0",
+    "@tanstack/react-query": "^5.104.0",
+    "next": "^16.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "viem": "^2.57.0",
+    "wagmi": "^2.19.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
