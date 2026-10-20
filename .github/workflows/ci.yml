@@ -23,4 +23,4 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run typecheck --if-present
       - run: npm test --if-present
-      - run: npm run build
+      - run: npm run build --if-present
